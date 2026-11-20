@@ -1,23 +1,17 @@
-# VoltAgent — native tool-authorization overlap roadmap (OpenSiro plan-only)
+# Fork Issue draft (VoltAgent; internal only)
 
-**OpenSiro PLAN_ONLY · Final decision: NO_GO · Research outcome: NEEDS_EVIDENCE · 2026-11-19**
+**Destination:** opensiro-contributions/voltagent GitHub Issues, only after exact current-conversation approval.
+**Proposed title:** Plan-only: bounded pre-dispatch delegation decision after child tool denial
+**Status:** DRAFT — NOT PUBLISHED (do not send without owner's exact approval of title, destination and full text)
 
-OpenSiro investigates whether source-native, VSM-informed organizational specifications can reduce the engineering and maintenance cost of agent harnesses. This is an *unmeasured hypothesis*, not a request for VoltAgent to adopt VSM or a claim that the project is missing six components.
+## Proposed body
 
-**Accepted historical Index evidence:** [VoltAgent assessment](https://github.com/opensiro/vsm-harness-index/blob/34e11ec4dd52e1ba3ee0111d8bca73f13918f54f/assessments/vo/voltagent.md), reviewed 2026-09-19 against [44b4c8e4998ce56095b2f0e4eaf1a988f5e6d0de](https://github.com/VoltAgent/voltagent/commit/44b4c8e4998ce56095b2f0e4eaf1a988f5e6d0de); **S1=A, S2=C, S3=—, S3*=—, S4=—, S5=—**. These are historical ownership findings, not today's grades. The source reviewed here is [current main e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c](https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/README.md).
+A VoltAgent `Supervisor` with registered read-only `Researcher` and owner-authorized `Writer` subagents can observe a denied MCP write through the shipped `authorization.can` mechanism. A source-native proposal worth testing is an opt-in typed `SupervisorConfig` callback inside `SubAgentManager.createDelegateTool` **after resolving `targetAgents`, before parallel `handoffToMultiple`**. An app-composed current-team controller would choose `allow`, `hold`, `subset of selected registered agents`, or `escalate to owner`, without expanding any child's grants. Existing tool/handoff hooks could return feedback to the next delegation decision.
 
-## User need and original-native overlap
+Before adding a port, test whether shipped supervisor `onToolStart` (which runs on the injected `delegate_task`) combined with child `onToolError`, `onHandoffComplete`, and MCP `can` already implements the same safe team decision and feedback. If yes, **do not** add a new controller. We have not independently reproduced reliable child MCP-denial attribution or the proposed effect. Related original [Issue #1177](https://github.com/VoltAgent/voltagent/issues/1177) and **unmerged** [PR #1390](https://github.com/VoltAgent/voltagent/pull/1390) concern agent-local tool guards, not ultimate policy decisions; separate S3 budgets/commitment work must not be duplicated.
 
-[Issue #1177](https://github.com/VoltAgent/voltagent/issues/1177) requests per-agent tool access restrictions, denied-call visibility, and delegation boundaries. The original already ships MCP authorization with discovery filtering and execution checks, as documented [here](https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/website/docs/agents/mcp/authorization.md), following merged [PR #870](https://github.com/VoltAgent/voltagent/pull/870). [PR #1390](https://github.com/VoltAgent/voltagent/pull/1390) is **open, not merged**; it proposes the remaining agent-level \`toolGuard\`, including denial and error/end hooks. An open PR is not shipped functionality or independent proof that tests passed.
+OpenSiro's accepted [historical Index assessment](https://github.com/opensiro/vsm-harness-index/blob/8f436270813b844aafc16917d69bc09661ef1544/assessments/vo/voltagent.md) (reviewed 2026-09-19; review_ref `44b4c8e4998ce56095b2f0e4eaf1a988f5e6d0de`, Profile 0.2.3 / Methodology 0.3.5) records `S1=A · S2=C · S3=— · S3*=— · S4=— · S5=—`. S1 is the operating Agent loop; S2 is composed subagent coordination; S3 current team regulation is this **hypothetical** candidate; S3* independent audit, S4 future environment and S5 policy/identity were not credited in that historical review. These are ownership observations, not product quality scores or current grades. A means autonomous, C developer-composable, — not evidenced.
 
-## Decision and next steps
+**Result:** proposal-stage `GO / NEEDS_EVIDENCE` is a conditional architectural hypothesis only, PLAN_ONLY; no native tests (NOT_RUN), measured benefit (NOT_MEASURED), maintainer preference or Index grade change. Adoption belongs to VoltAgent maintainers.
 
-**NO_GO now:** do not build a separate VSM S3/S5 controller, duplicate \`toolGuard\`, or open a new maintainer feature Issue. The permission guard is enforcement of application-supplied authority, not evidence of an agent-owned whole-system S3 or ultimate-policy S5 decision.
-
-**P0:** proposed additional VSM controller — **not qualified / rejected now**. **P1:** assess the existing original PR #1390 and compare MCP \`can\` vs agent-level guard with source-native allow/deny, delegation and audit tests *if independently authorized*. **P2:** none.
-
-Reopen only on evidence of a materially different user outcome that the original solutions cannot supply, with a real autonomous decision owner, enforceable state and downstream feedback. No native tests were run for this roadmap, cost reduction is **NOT_MEASURED**, and OpenSiro claims no implementation or maintainer endorsement.
-
-**OpenSiro case:** [Human decision](https://github.com/opensiro-contributions/voltagent/blob/opensiro/meta/.opensiro/issues/tool-authorization-native-overlap-20261119/issue.md) · [AI/developer sufficiency contract](https://github.com/opensiro-contributions/voltagent/blob/opensiro/meta/.opensiro/issues/tool-authorization-native-overlap-20261119/constructor-sufficiency.md) · [receipt](https://github.com/opensiro-contributions/voltagent/blob/opensiro/meta/.opensiro/issues/tool-authorization-native-overlap-20261119/roadmap.md).
-
-**AI disclosure:** prepared with AI assistance; no independent human review, verified savings, native test execution, or external maintainer approval is claimed.
+**Fork-local canonical evidence:** [roadmap](https://github.com/opensiro-contributions/voltagent/blob/opensiro/meta/.opensiro/issues/tool-authorization-native-overlap-20261119/roadmap.md), [Human](https://github.com/opensiro-contributions/voltagent/blob/opensiro/meta/.opensiro/issues/tool-authorization-native-overlap-20261119/issue.md), [AI](https://github.com/opensiro-contributions/voltagent/blob/opensiro/meta/.opensiro/issues/tool-authorization-native-overlap-20261119/constructor-sufficiency.md). AI-assisted analysis; no human review, first-party tests or maintainer consent asserted.

@@ -21,28 +21,31 @@ Original `VoltAgent/voltagent` [main@e9fc599f](https://github.com/VoltAgent/volt
 
 ## Independent Track B — minimal complete S3 C chain
 
-| C link | Source to reuse | Missing first-party connector (HYPOTHETICAL) | Evidence/falsifier |
+**HYPOTHETICAL concrete case:** `Supervisor` has registered `Researcher` (read-only) and `Writer` (owner-approved). After a denied MCP write by Researcher, a developer-composed S3 actor evaluates the supervisor's *next* `delegate_task({task,targetAgents,context})`; it can ALLOW, HOLD, restrict to an already selected/registered subset, or escalate to the app owner, never add a privileged worker or grant tools.
+
+| C link | Native source | Missing source-native decision seam | Falsifier |
 | --- | --- | --- | --- |
-| Joint current state | operation IDs, tool outcomes and agent handoff events | Team snapshot of active child identities, allowed tool ceiling, in-flight operations and versioned denials | Ensure snapshot reflects same team under races |
-| Decision options | parent-defined policies, workflow hold, supervisor dispatch | Opt-in S3 actor port choosing `keep/narrow/hold/reassign/escalate`; forbid grant expansion | Two different authorized decisions under same permission ceiling |
-| Operational effect | local tool execution adapter, MCP `can`, subagent delegation, workflow resume | One validated restrictive enforcement barrier across local/provider/MCP/child paths | A disallowed child cannot bypass via alternative tool type or race |
-| Return and feedback | `onToolError/onToolEnd`, `onHandoffComplete`, trace/operation IDs | Correlate the actor decision with later authorization and task outcomes; revise next decision | No feedback or no consequence -> not C |
+| Current evidence | `onToolError` has child Agent/context; `onHandoffComplete` returns child result and usage | Correlate actual `MCPAuthorizationError` to parent handoff and parent-owned role ceiling; **UNVERIFIED** | Denied MCP call not attributable |
+| Independent choice | `SupervisorConfig` and registered `subAgents`; `delegate_task` accepts `task,targetAgents,context` | Optional typed composed S3 decision after name lookup: allow/hold/selected subset/escalate | Existing `onToolStart` already handles equivalent owner decision |
+| Enforce | `createDelegateTool` directly calls parallel `handoffToMultiple` | Verify and apply choice *before* Promise.all child dispatch; no new targets or rights | Race/bypass or no lawful pre-dispatch effect |
+| Return | `onHandoffComplete` after child run, `onToolError` on tool failures | Link the next result/error with earlier S3 choice and reconsider following handoff | Post-factum notification only, no consequential next decision |
 
-This is **not** an autonomous S5 policy issuer. The app must supply immutable `maxRights`; the independent actor has only restrictive operating decisions. It cannot alter identity, elevate grants or waive external human approval. If implementation requires changing ultimate policy, the proposal is invalid.
+**Precise anchors:** [`createDelegateTool`](https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/agent/subagent/index.ts#L776-L857), [`handoffToMultiple`](https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/agent/subagent/index.ts#L735-L749), [`SupervisorConfig`](https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/agent/types.ts#L344-L382), [`Agent.prepareTools`](https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/agent/agent.ts#L6331-L6366), [`onToolStart`](https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/agent/agent.ts#L6478-L6491), [`onHandoffComplete`](https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/agent/subagent/index.ts#L470-L496), [`MCPClient.callTool`](https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/mcp/client/index.ts#L474-L501).
 
-**Residual versus existing separate S3 case:** [supervisor-commitment-control](https://github.com/opensiro-contributions/voltagent/blob/78496f45b5475a42b409eac4b4aa3a396b907836/.opensiro/issues/supervisor-commitment-control-20261119/roadmap.md) allocates tasks/resources. Do not make this another admission queue. Only a genuinely distinct cross-tool **restrictive rights** decision + enforcement/feedback can qualify. If the future commitment controller subsumes these rights, merge analysis/dedupe rather than creating two runtime controllers.
+**Existing native baseline is a real falsifier:** the injected `delegate_task` is a local tool whose `onToolStart` runs before execute. Verify whether an app-local actor can safely hold/subset/retry via this hook with equivalent feedback; do not invent a missing constructor. `onHandoffComplete` runs only *after* work and swallows callback failures, so it is not a gate. Cross-tool universal enforcement is **NOT** part of this minimum P0. Original [Issue #1177](https://github.com/VoltAgent/voltagent/issues/1177) and OPEN/unmerged [PR #1390](https://github.com/VoltAgent/voltagent/pull/1390) concern agent-local tool rights. Separate S3 commitments case controls task budgets; do not duplicate.
 
 ## Native test contract (future, NOT_RUN)
 
-- **Positive:** parent grants supervisor admin and child read-only; child read succeeds. After a team-level live denial event, S3 actor narrows future permissible child action; actual next action respects the narrower mode and its result reaches the actor.
-- **Distinct choice:** with the same upper parent policy, alternative available current-state evidence yields hold or reassign; record why, enforce before delegated execution and observe later result.
-- **Negative non-escalation:** actor requests `grantAdmin` or child attempts local, provider or MCP privileged operation; first-party boundary rejects without side effect. Child cannot replay through another transport or workflow resume.
-- **Failure:** absent actor, stale state version, denied MCP after discovery, malformed identity, concurrent revocation or controller failure must not silently widen access. No guarantee claimed without native tests.
-- **Matched baseline:** run identical team/roles/tools with *shipped* `can` and wrappers + hooks + supervisor. If a single app-level component already realizes identical first-party independent decision ownership, all-path effect and feedback, no new constructor link remains: revise `GO` to `NO_GO`.
-- **Sources/legality:** inspect exact tool/hook/provider implementation and original PR heads again before any implementation; MIT license checked; contributor/CLA/AI formalities and publication authority separately gated.
+- Native-only baseline: supervisor `onToolStart` on `delegate_task`, child `onToolError`, parent `onHandoffComplete`, MCP `authorization.can`; reproduce a denied MCP write and a following delegation, checking independent current-owner choice, enforceable hold/subset and returned feedback.
+- Positive proposed port: after registered-target lookup, controller returns HOLD and no child starts; allow returns normal handoff/result; selected subset runs only preselected authorized agents.
+- Negative: no unregistered child, elevation of local/MCP rights, stale decision, missing actor in protected mode, concurrent subset bypass or silent execution after controller error.
+- Falsifier: shipped hooks already close same lawful S3 decision/effect/feedback, or denied MCP event lacks reliable correlation; then rescind/qualify GO rather than implementing generic machinery.
+- Native tests NOT_RUN, costs NOT_MEASURED, no product code or public communication.
 
 ## Decision and attribution
 
 Independent first-pass `GO / NEEDS_EVIDENCE` was sealed in [#58](https://github.com/opensiro/upstream/issues/58#issuecomment-7043540206) before reading the old fork-local arguments. Old same-case `NO_GO` assumed an autonomous new S3/S5 authorization-policy chooser; this Wave 4 proposal is bounded restrictive *current* management with explicit subsequent feedback, not a claim the old decision was defective. The old case is preserved by Git history, and separate S3 resource case remains unchanged.
 
 **Validation status:** native tests NOT_RUN; structural validator required separately; costs NOT_MEASURED. **No third-party/public fork issue, original issue/PR/comment, product implementation, or Index grade change.** Maintainers decide whether any proposed architecture should be built.
+
+**v0.18.1 specificity revision:** [patch #87](https://github.com/opensiro/upstream/pull/87) is advisory; status-only [PR #85](https://github.com/opensiro/upstream/pull/85) closed under [PR #89](https://github.com/opensiro/upstream/pull/89). Earlier source-first verdict/history remains intact.

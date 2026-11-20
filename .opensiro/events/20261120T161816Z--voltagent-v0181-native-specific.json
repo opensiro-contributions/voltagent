@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "20261120T161816Z--voltagent-v0181-native-specific",
+  "recorded_at": "2026-11-20T16:18:16Z",
+  "actor": "ChatGPT/GPT-6, owner-directed internal OpenSiro roadmap",
+  "kind": "ROADMAP_REFINEMENT",
+  "original_repository": "VoltAgent/voltagent",
+  "case_id": "tool-authorization-native-overlap-20261119",
+  "decision": "GO",
+  "research_disposition": "NEEDS_EVIDENCE",
+  "target_transition": "S3=— -> S3=C",
+  "scope": "v0.18.1 source-native refinement of existing Wave 4; not fresh blind rerun",
+  "source_sha": "e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c",
+  "evidence_urls": [
+    "https://github.com/opensiro/upstream/issues/58#issuecomment-7044398119",
+    "https://github.com/opensiro/upstream/pull/87",
+    "https://github.com/opensiro/upstream/pull/89",
+    "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/agent/subagent/index.ts#L776-L857"
+  ],
+  "native_tests": "NOT_RUN",
+  "costs": "NOT_MEASURED",
+  "third_party_publication": "NOT_PUBLISHED",
+  "next_action": "Native onToolStart baseline and actual denied MCP attribution before any implementation"
+}
