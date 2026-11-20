@@ -1,26 +1,16 @@
-# VoltAgent — tool authorization native-overlap roadmap case
+# VoltAgent — tool authorization native-overlap case
 
-**PLAN_ONLY · research outcome: NEEDS_EVIDENCE · operator decision: NO_GO · fork Issue: NOT PUBLISHED**
+**Current Wave 4 (2026-11-20):** **GO / NEEDS_EVIDENCE**, PLAN_ONLY, HYPOTHETICAL `S3=— -> S3=C` *bounded team current-operation rights narrowing*, not a permission grant engine or product decision. [First-pass checkpoint](https://github.com/opensiro/upstream/issues/58#issuecomment-7043540206). Earlier `NO_GO / NO_USEFUL_CHANGE` assessment and repeated recheck remain in prior Git commits; neither is erased or misreported as the Wave 4 result.
 
-- Original repository: [VoltAgent/voltagent](https://github.com/VoltAgent/voltagent)
-- Original HEAD: [e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c](https://github.com/VoltAgent/voltagent/commit/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c) (default \`main\`, observed 2026-11-19)
-- Verified fork: [opensiro-contributions/voltagent](https://github.com/opensiro-contributions/voltagent) (parent \`VoltAgent/voltagent\`, fork default HEAD e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c at screening)
-- Accepted Index commit: [34e11ec4dd52e1ba3ee0111d8bca73f13918f54f](https://github.com/opensiro/vsm-harness-index/commit/34e11ec4dd52e1ba3ee0111d8bca73f13918f54f)
-- Accepted assessment: [VoltAgent](https://github.com/opensiro/vsm-harness-index/blob/34e11ec4dd52e1ba3ee0111d8bca73f13918f54f/assessments/vo/voltagent.md) (blob \`c7dec10ee48c461833c33e0ceb408cd49ed57fdd\`, reviewed 2026-09-19, ref \`44b4c8e4998ce56095b2f0e4eaf1a988f5e6d0de\`, Profile 0.2.3 / Methodology 0.3.5)
-- Historical vector: **S1=A · S2=C · S3=— · S3*=— · S4=— · S5=—**
-- Research scope: first-party VoltAgent application Agent/runtime, MCP authorization, workflow/supervisor paths; external providers, independently operated VoltOps and original maintainer governance excluded
-- Native work: [Issue #1177](https://github.com/VoltAgent/voltagent/issues/1177), [merged PR #870](https://github.com/VoltAgent/voltagent/pull/870), [open PR #1390](https://github.com/VoltAgent/voltagent/pull/1390) at head \`0fb458490703f5a89f6bb0e196c0c4f79bf95cb1\`
-- Nearby reliability work, not the same feature: [Issue #1537](https://github.com/VoltAgent/voltagent/issues/1537) and [open PR #1549](https://github.com/VoltAgent/voltagent/pull/1549)
-- Legal preflight: original GitHub reports MIT; published CONTRIBUTING routes to [contribution guide](https://voltagent.dev/docs/community/contributing/); specific CLA/DCO and AI-attestation conditions are unverified, not waived
-- Owner control: initialized \`PAUSE\` / \`DORMANT\`, no invented ALLOW or RESUME; subsequent writes require effective owner control
-- Public fork GitHub Issue: **NOT PUBLISHED** — exact new approval required for [prepared title/body](fork-issue-draft.md)
-- Public external original Issue/PR/comment: **NOT PUBLISHED** — none requested or authorized
+- Original: [VoltAgent/voltagent@e9fc599f](https://github.com/VoltAgent/voltagent/commit/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c)
+- Working fork: `opensiro-contributions/voltagent`, separate `opensiro/meta`, owner `ACTIVE / ALLOW` read back
+- Accepted included Index: [assessment](https://github.com/opensiro/vsm-harness-index/blob/8f436270813b844aafc16917d69bc09661ef1544/assessments/vo/voltagent.md), blob `c7dec10ee48c461833c33e0ceb408cd49ed57fdd`, review ref `44b4c8e4998ce56095b2f0e4eaf1a988f5e6d0de`, reviewed 2026-09-19, Profile 0.2.3, Skills 0.3.5; historical vector `A C — — — —`
+- Current canonical receipt: [roadmap.md](roadmap.md)
+- Human explanation and six-function map: [issue.md](issue.md)
+- AI/developer C-sufficiency and native falsifier: [constructor-sufficiency.md](constructor-sufficiency.md)
+- Existing public fork Issue draft: [fork-issue-draft.md](fork-issue-draft.md) is **historical / stale from earlier NO_GO** and NOT PUBLISHED; do not post it as the current decision
+- Native overlap: [Issue #1177](https://github.com/VoltAgent/voltagent/issues/1177), merged [PR #870](https://github.com/VoltAgent/voltagent/pull/870), open/unmerged [PR #1390](https://github.com/VoltAgent/voltagent/pull/1390). Independent [supervisor commitments S3 proposal](https://github.com/opensiro-contributions/voltagent/blob/78496f45b5475a42b409eac4b4aa3a396b907836/.opensiro/issues/supervisor-commitment-control-20261119/roadmap.md) is separate and must not be duplicated
+- Legal: original MIT; contributor workflow/other formalities need fresh exact review before work
+- Native tests NOT_RUN; costs NOT_MEASURED; third-party original/public fork Issue/PR/comment NOT_PUBLISHED; no product changes or Index regrade
 
-## Canonical case documents
-
-1. [Human decision and assessment context](issue.md)
-2. [AI/developer constructor sufficiency and acceptance](constructor-sufficiency.md)
-3. [Capability Roadmap Receipt](roadmap.md)
-4. [Complete fork Issue draft, not published](fork-issue-draft.md)
-
-**Final operator decision: NO_GO.** Do not add a parallel authorization layer or speculative S3/S5 controller. Existing MCP authorization is shipped; agent \`toolGuard\` remains an open original PR. Consider only source-native PR review or an independently demonstrated residual user task, with separate rights and implementation intent. The old Index review is over 30 days old; optional Index reassessment is advisory only.
+**Next permitted action:** review independent S3-control sufficiency and test the cheapest shipped tool-policy baseline versus the proposed bounded team decision and cross-path feedback before any product or publication decision.

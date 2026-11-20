@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "20261120T152700Z--voltagent-wave4-s3-authority-neutral",
+  "recorded_at": "2026-11-20T15:27:00Z",
+  "actor": "ChatGPT/GPT-6 (owner-directed OpenSiro internal roadmap execution)",
+  "kind": "ROADMAP_DECISION",
+  "case_id": "tool-authorization-native-overlap-20261119",
+  "original_repository": "VoltAgent/voltagent",
+  "decision": "GO",
+  "research_disposition": "NEEDS_EVIDENCE",
+  "target_transition": "S3=— -> S3=C",
+  "assessment_neutral": true,
+  "scope": "post-release v0.18.0 Wave 4; new independent source-first checkpoint before historical comparison",
+  "evidence_urls": [
+    "https://github.com/opensiro/upstream/issues/58#issuecomment-7043468953",
+    "https://github.com/opensiro/upstream/issues/58#issuecomment-7043540206",
+    "https://github.com/VoltAgent/voltagent/commit/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c",
+    "https://github.com/opensiro/vsm-harness-index/blob/8f436270813b844aafc16917d69bc09661ef1544/assessments/vo/voltagent.md"
+  ],
+  "next_action": "Native matched baseline/cross-path authority proof; maintainers decide adoption; no external publication",
+  "native_tests": "NOT_RUN",
+  "costs": "NOT_MEASURED",
+  "external_publication": "NOT_PUBLISHED"
+}

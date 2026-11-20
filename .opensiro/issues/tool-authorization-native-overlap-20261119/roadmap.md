@@ -1,105 +1,105 @@
-# VoltAgent — repeated NO_GO capability-roadmap source-first recheck (v0.18 contract)
+# VoltAgent — Wave 4 assessment-neutral team action control (2026-11-20)
 
 - Receipt contract: proposal-gate
 - Original repository: VoltAgent/voltagent
 - Original HEAD: e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c
 - Observed at: 2026-11-20
-- Accepted Index assessment: https://github.com/opensiro/vsm-harness-index/blob/c2e43bf4750841277b3e58d8ba80314121734764/assessments/vo/voltagent.md
+- Accepted Index assessment: https://github.com/opensiro/vsm-harness-index/blob/8f436270813b844aafc16917d69bc09661ef1544/assessments/vo/voltagent.md
 - Accepted assessment blob SHA: c7dec10ee48c461833c33e0ceb408cd49ed57fdd
 - Accepted review ref: 44b4c8e4998ce56095b2f0e4eaf1a988f5e6d0de
 - Accepted reviewed at: 2026-09-19
-- Index corpus pin: c2e43bf4750841277b3e58d8ba80314121734764
+- Accepted Index commit: 8f436270813b844aafc16917d69bc09661ef1544
 - Accepted Profile version: 0.2.3
-- Accepted Methodology version: 0.3.5
+- Accepted Skills methodology version: 0.3.5
 - Accepted VSM vector: S1=A · S2=C · S3=— · S3*=— · S4=— · S5=—
-- System in focus: First-party VoltAgent @voltagent/core Agent, MCP tool authorization, per-agent tool execution, optional supervisor/subagents and supported workflow/hook surfaces; external policy engines, MCP servers, separately operated VoltOps and maintainer governance are outside the runtime boundary
-- Repository-wide source map: original LICENCE and contributing guide, packages/core/src/agent/types.ts, packages/core/src/agent/subagent/index.ts, website/docs/agents/mcp/authorization.md, website/docs/agents/hooks.md, website/docs/guardrails/overview.md, website/docs/workflows/suspend-resume.md, accepted Index, original Issue 1177, original PRs 870/1390/821/1549 and their current statuses and PR1390 code diff
-- Evaluation object: Additional autonomous organizational S3/S5 policy/authorization controller for per-agent local/provider/MCP tool rights beyond existing MCP checks, owner-provided local guards and pending native toolGuard
-- Existing-work overlap: SHIPPED MCP can with discovery/execution enforcement; local/provider toolGuard is open unmerged PR 1390; alternative application-supplied wrappers and step filtering; separate S3 shared-commitment proposal in supervisor-commitment-control-20261119 is not this case
-- Our on-top contribution: No qualified independent C construction for access policy; choose application-owned permission rules and source-native guard/hook improvement, not a second organizational policy controller
-- Incremental benefit: No additional lawful decision/feedback loop, operating outcome or cost saving proven against current MCP and nearest original-native alternative; NOT_MEASURED
-- Decision scope: Scoped NO_GO for the additional autonomous C authorization controller only; Issue 1177 and PR 1390 stay distinct native open work, and separate S3 GO / NEEDS_EVIDENCE remains intact
-- Target transition: NO_QUALIFIED_C_TARGET
-- Priority rationale: Authorization checks are enforcement of application-supplied policy, not demonstrated S3 current-portfolio management, complementary S3* correction or S5 purpose/policy resolution; S1/S2 mechanisms already exist and S4 has no relevant prospective environment task
-- P1 dependencies: Original maintainers review PR 1390 and Issue 1177, test local/provider/MCP deny consistency, agent-child non-escalation, audit hooks and fail-closed controls against supported native policies
-- P2 optional: Independently investigate a genuinely missing review or organization-level decision only after a user supplies concrete demand and lawful decisive authority; avoid duplicating the separate S3 case
-- Proposed C construction: REJECTED — hypothetical cross-agent tool-policy chooser would need a separately composed S3 or S5 actor with legitimate independent options, enforceable first-party decision and later task feedback; no source-backed task or parent delegation currently qualifies it
-- C sufficiency falsifier: Reproduce an original native case where current app-supplied policy, MCP can, existing hooks and PR 1390 cannot reach the required allowed/denied outcome, but a separately authorized developer-composed decisive actor can change it lawfully, return corrective feedback and outperform the cheapest alternative on the same workload
-- Scenario basis: OBSERVED
-- Proposal-stage decision: NO_GO
-- Research disposition: NO_USEFUL_CHANGE
-- Proposed validation: A native comparison of read-only and privileged subagents, MCP discovery and runtime denial, local/provider toolGuard pending implementation, scoped delegated roles, audit error/end, denied attempts, mismatched identity, stale authorizations and permitted controls; all NOT_RUN in this review
+- System in focus: First-party VoltAgent @voltagent/core Agent and optional multi-subagent team, including local/provider tools, MCP authorization, delegation and workflow hooks; external MCP servers, external policy engines, VoltOps and maintainer governance excluded
+- Repository-wide source map: https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/README.md; https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/agent/agent.ts; https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/agent/hooks/index.ts; https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/agent/subagent/index.ts; https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/tool/manager/ToolManager.ts; https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/mcp/authorization/index.ts; https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/website/docs/agents/mcp/authorization.md; https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/website/docs/workflows/suspend-resume.md; https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/agent/guardrail.ts; https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/agent/agent.spec.ts; https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/LICENCE; https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/CONTRIBUTING.md; original Issues/PRs #1177/#870/#1390/#821/#1549; accepted Index
+- Evaluation object: Optional S3 current-operation restriction and hold/reassignment of tool-capable actions across a team under an immutable application-supplied permission ceiling, not an autonomous S5 policy grant or merely an agent-local toolGuard
+- Existing-work overlap: SHIPPED MCP authorization can, tool wrappers, hooks, supervisor delegation and workflow suspension; OPEN/UNMERGED original toolGuard PR #1390; distinct pre-existing OpenSiro supervisor-commitment S3 proposal (resource/commitment admission) is not shipped and must not be duplicated
+- Our on-top contribution: PLAN_ONLY optional first-party team-scoped S3 decision constructor that receives a versioned active-team action/denial snapshot, chooses only lawful temporary NARROW/HOLD/REASSIGN/ESCALATE options, enforces the decision through local/provider/MCP/delegation boundaries and observes the next action outcome; never widens parent rights
+- Incremental benefit: HYPOTHETICAL coherent team-level *dynamic* restriction/return over independent per-agent static authorizers, not a measured need, savings, incident, or maintainer request
+- Decision scope: Wave 4 post-release v0.18.0 architecture-only GO for an optional differentiated S3=C construction hypothesis; no product adoption decision, Index regrade, shipped capability or implementation
+- Target transition: S3=— -> S3=C
+- Priority rationale: S1 is already autonomous and S2 already composable; S3 has a source-mapped team-wide current-state/choice/action/return candidate only if the control is genuinely cross-boundary and not just a policy callback; S3*/S4 lack this case's independent external evidence loop; S5 policy remains parent-owned
+- P1 dependencies: Prove action-path coverage on actual core versions, parent immutable upper rights, versioned non-escalating snapshot, race-safe enforcement/compensation at local/provider/MCP and delegate_task entry points, post-decision audit feedback, and tests against shipped source-native baseline and open PR #1390 without treating the latter as merged
+- P2 optional: NONE; maintain separate supervisor-commitment S3 case and no coupling to unrelated S4 or S5 work
+- Proposed C construction: In an opt-in multi-agent installation, developer composes an S3 actor under explicit owner-set fixed grants; first-party team control port gathers per-agent live grants/denials/in-flight delegation/feedback; actor chooses among several restrictive operational responses; validated atomic action applies to all supported execution paths; next operation feedback closes and corrects the current-control loop
+- C sufficiency falsifier: The *shipped* MCP can, local tool wrappers and standard hooks combined with existing supervisor/workflow already provide the same first-party team-level independent state/options/decision, non-bypassable cross-path enforcement and correlated subsequent feedback without adding any constructor port; or no lawful role can perform the claimed independent decision
+- Scenario basis: HYPOTHETICAL
+- Proposal-stage decision: GO
+- Research disposition: NEEDS_EVIDENCE
+- Proposed validation: In a multi-subagent fixture with read-only child, privileged supervisor, local/provider and MCP actions, compare static application-owned can/wrappers with the candidate team S3 actor; test allowed action, dynamic narrowing, denial feedback/next choice, privilege escalation refusal, missing actor default, revoked grant race, delegations and workflow resume; execute with native suite in future
 - Validation state: NOT_RUN
-- Proposal falsifier: Demonstrate a repeatable owner-approved org-level policy decision and return not obtainable through the source-native per-tool checks with lower implementation and maintenance cost
-- S1 disposition: Autonomous Agent executes tools; denial is a configured operational boundary, no extra C
-- S2 disposition: Optional SubAgentManager coordinates otherwise independent specialists with developer configuration; already C at accepted historical ref, not policy S3
-- S3 disposition: A per-agent guard has no separate current-portfolio task/capacity/commitment arbitration; separate supervisor S3 hypothesis is tracked elsewhere and remains proposal-only
-- S3* disposition: onToolError/onToolEnd and trace hooks log or observe execution, not an independent protected review able to veto and correct a distinct organizational commitment
-- S4 disposition: No verified environmental-future signal/options/feedback loop in the tool-access request; no justified construction
-- S5 disposition: Application/operator authors retain rightful identity, roles and ultimate policy; tool guards enforce rather than legitimately establish/change that policy
-- Result: NO_USEFUL_CHANGE
+- Proposal falsifier: Native-only scenario shows identical lawful team-level actor choice, enforcement on all paths and subsequent feedback, or parent rights cannot be enforced without unsafe override; then revise to NO_GO
+- S1 disposition: Autonomous Agent model/tool execution with operational feedback; accepted A; no new S1 constructor requested
+- S2 disposition: Optional SubAgentManager delegate_task and workflow composition coordinate specialists; accepted C; no extra coordination mechanism requested
+- S3 disposition: Accepted —; candidate C only for a distinct, developer-composable team current-operation decision owner with live state, restrictive action and later feedback, beyond stateless per-tool policy
+- S3* disposition: Guardrails, hook events and tracing are observations, not a separate independent audit-to-correction actor in this case; NO_TARGET
+- S4 disposition: Models, tool integrations, fallback and workflow state do not establish prospective environment intelligence for this scenario; NO_TARGET
+- S5 disposition: App owner defines immutable identity, upper tool grants and approval policy; no S5 purpose/identity change delegated; NO_TARGET
+- Result: PLAN_ONLY
 - External issue: DRAFT — NOT PUBLISHED
 - Public fork Issue: DRAFT — NOT PUBLISHED
 - Cost status: NOT_MEASURED
 
 ## Identity and pins
 
-Accepted historical assessment at https://github.com/opensiro/vsm-harness-index/blob/c2e43bf4750841277b3e58d8ba80314121734764/assessments/vo/voltagent.md is included, repo/harness_id/review_ref match current catalog at c2e43bf4750841277b3e58d8ba80314121734764; original review ref resolves. Original default main is pinned at [e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c](https://github.com/VoltAgent/voltagent/commit/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c), unchanged from the historical case's original HEAD; this does NOT update accepted assessment grades or timestamp. Original https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/LICENCE (MIT) and https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/website/docs/community/contributing.md examined. Public original feature discussion requires issue-first coordination. Fork state read at opensiro/meta: ACTIVE / ALLOW, so internal metadata can be written. External publication and personal CLA/DCO attestations are NOT authorized/inferred.
+[Current original source@e9fc599f](https://github.com/VoltAgent/voltagent/commit/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c) was independently checked against the accepted [Index assessment](https://github.com/opensiro/vsm-harness-index/blob/8f436270813b844aafc16917d69bc09661ef1544/assessments/vo/voltagent.md): included, exact original/harness_id/review_ref matched [Index catalog](https://github.com/opensiro/vsm-harness-index/blob/8f436270813b844aafc16917d69bc09661ef1544/data/catalog.psv). The historical six-grade vector and review date are not a current assessment or defect list. The source inspection covered repository boundaries and primary runtime, API/hook, product/docs, testing, CI structure, license and original Issue/PR paths. This is not an exhaustive untested runtime behavioral proof.
 
 ## Rights and authority
 
-Application author supplies role/identity/rights; original maintainer retains code acceptance and architecture decisions. No autonomous agent may self-grant privileged tools or bypass parent S5. Third-party original Issues/PRs/comments, public fork issues and external PRs require exact separate consent; none is published or altered. Read-only source analysis is not a product implementation. The existing S3 proposal case is not merged and cannot be credited as shipped S3.
+Original [LICENCE](https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/LICENCE) is MIT; [CONTRIBUTING](https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/CONTRIBUTING.md) routes to a contributor guide. Formalities/CLA/DCO/AI declaration requirements beyond inspected text are unverified. Verified working fork `opensiro-contributions/voltagent` is a real fork of `VoltAgent/voltagent`; `opensiro/meta` read back `ACTIVE / ALLOW`. Application owner, not a proposed S3 actor, sets the upper bound of tool identity/privileges. Maintainers decide actual product direction. No external/public Issue/PR/comment, third-party patch, product tests or Index regrade authorized by this record.
 
 ## Existing work / overlap
 
-- SHIPPED native: [MCP authorization](https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/website/docs/agents/mcp/authorization.md) documents developer-provided `authorization.can`, `filterOnDiscovery` and `checkOnExecution`; original [#870](https://github.com/VoltAgent/voltagent/pull/870) merged.
-- REQUEST: original [#1177](https://github.com/VoltAgent/voltagent/issues/1177) is OPEN, asks per-agent permission, delegated read-only roles, audit denials. Several comments suggest step filtering and tool wrappers, not maintainer authorization to create an independent controller.
-- PENDING native: original [#1390](https://github.com/VoltAgent/voltagent/pull/1390) OPEN, unmerged head `0fb458490703f5a89f6bb0e196c0c4f79bf95cb1`; inspected actual Agent types/code diff for `toolGuard` and deny `ToolDeniedError`, `onToolError`/`onToolEnd`. Proposed behavior is NOT shipped; PR-declared test plan is not a test executed here.
-- Other adjacent: [#821](https://github.com/VoltAgent/voltagent/pull/821) OPEN traffic/concurrency management, [#1549](https://github.com/VoltAgent/voltagent/pull/1549) OPEN retry/tool replay repair, neither grants ultimate permission or proves an independent new audit actor.
-- Existing first-party [SubAgentManager](https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/agent/subagent/index.ts), [hooks](https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/website/docs/agents/hooks.md), [guardrails](https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/website/docs/guardrails/overview.md), [workflow suspend/resume](https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/website/docs/workflows/suspend-resume.md) provide delegation, observation and owner-supplied approval continuation, not automatic S5 delegation.
+- SHIPPED [MCP `authorization.can`](https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/website/docs/agents/mcp/authorization.md) provides discovery filtering and per-execution access decisions (original merged [PR #870](https://github.com/VoltAgent/voltagent/pull/870)).
+- SHIPPED [hooks](https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/agent/hooks/index.ts) expose `onToolStart/onToolEnd/onToolError`, [SubAgentManager](https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/agent/subagent/index.ts) provides `delegate_task`, [ToolManager](https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/packages/core/src/tool/manager/ToolManager.ts) prepares tools, and [workflows](https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/website/docs/workflows/suspend-resume.md) permit owner-driven pause/resume. These can solve narrower authorized-call tasks and may be a complete cheaper baseline; do not assert every tool path is protected without native tests.
+- OPEN [Issue #1177](https://github.com/VoltAgent/voltagent/issues/1177) requests per-agent tool policy, child read-only grants, and audit; original OPEN/UNMERGED [PR #1390](https://github.com/VoltAgent/voltagent/pull/1390) proposes a per-agent `toolGuard` with denied-call callbacks (head `0fb458490703f5a89f6bb0e196c0c4f79bf95cb1`). **Not shipped.** OPEN [PR #821](https://github.com/VoltAgent/voltagent/pull/821) targets traffic concurrency and adaptive limiting, not tool-grant decisions. OPEN [PR #1549](https://github.com/VoltAgent/voltagent/pull/1549) targets retry replay safety.
+- Separate [fork-local supervisor commitments case](https://github.com/opensiro-contributions/voltagent/blob/78496f45b5475a42b409eac4b4aa3a396b907836/.opensiro/issues/supervisor-commitment-control-20261119/roadmap.md) already proposes S3=C for team **work admission/budget/commitments**, not authorization. This Wave 4 design is restricted to **cross-tool execution rights below owner ceiling**, not a second task queue or a new S5 authority. Overlap must be measured, not assumed absent.
 
 ## Function ownership
 
-| Function | Historical state | Current first-party evidence / decisive owner | Added C disposition |
+| Function | Accepted historical state | Current first-party closure and limitation | Wave 4 C priority |
 | --- | --- | --- | --- |
-| S1 | A | Agent task/tool loop with external tool feedback | Already A |
-| S2 | C | Developer-composed subagent supervisor mediates specialist execution | Already C |
-| S3 | — | No shown separate whole-team current commitment owner from tool permission filtering | Do not confuse with separate S3 GO proposal |
-| S3* | — | Hooks capture error/end and metrics; no independent corrective reviewer | NOT_QUALIFIED |
-| S4 | — | Tool permissions are per-call present conditions, no prospective environment adaptation | NOT_QUALIFIED |
-| S5 | — | Human/application-authored policy is parent authority, not autonomous framework purpose choice | NO_TARGET |
+| S1 | A | Agent operates model/tools; tool denial is operational feedback | Already A |
+| S2 | C | SubAgentManager coordinates optional subagents and handoff | Already C |
+| S3 | — | Current rights checks are app-authored per-call boundaries; team-wide feedback-driven *restrictive* action decision is a proposed gap, not a shown feature | **P0 hypothetical S3=C** |
+| S3* | — | Hooks/guardrails/telemetry need an independent audit authority to qualify | No target |
+| S4 | — | No outside-and-future adjustment scenario established by tool permission checks | No target |
+| S5 | — | Operator/application retains identity/upper grant policy and escalation | Parent retained |
 
-Intentional omissions are UNVERIFIED beyond actual parent-controlled permission ownership. Historical labels are not current re-assessments or quality rankings.
+Deliberate local S3 omission is **UNVERIFIED**; the owner-controlled S5 boundary is legitimate. No grade change.
 
 ## Capability priority
 
-P0 NO_QUALIFIED_C_TARGET / NO_GO; research NO_USEFUL_CHANGE. P1 user/maintainer-led original #1177 / pending #1390 local permission and audit path, with narrow native regressions. P2 no autonomous C architecture recommendation. Falsifier as defined above. Confidence HIGH on native overlap, MODERATE on additional C usefulness without native tests or owner demand.
+**P0** optional current-operation team action-right narrowing/hold/reassignment constructor with end-to-end feedback, **not** static authorization middleware. **P1** source-native execution-path/rights integration and testable distinguishability versus existing `can`, hooks, wrappers, and the still-unmerged `toolGuard` PR. **P2** none. Scenario **HYPOTHETICAL**, proposal-stage **GO / NEEDS_EVIDENCE**, not product prioritization or demonstrated ROI. The cheapest native alternative is application-owned authorization and a supervisor-controlled workflow; if it already creates the full team-level C loop, this proposal fails.
 
 ## Parallel contribution-on-top review
 
-| Track | Native coverage → minimum on-top work | Distinct outcome versus cheapest alternative | Falsifier |
+| Link / track | Current coverage vs proposed minimum | Differentiated actor / closure | Falsifier |
 | --- | --- | --- | --- |
-| A1 reuse | SHIPPED MCP `can`, registration-time filtering, execution-time checks; app can wrap local tools | Same authorized/denied user action with zero new OpenSiro C function | Demonstrate testable unsupported local/provider/child path after owner config |
-| A2 native PR | OPEN #1390 provides Agent `toolGuard` and error/end hook receipt; evaluate before any implementation | Native contract directly targets issue #1177, without VSM-specific policy actor | Real unmet requirement outside its design once merged and tested |
-| B1 integrate | Build tests/adapter around #1390 under original maintainer review, strict agent/child identity and denial logs | Potential original-native S1 security correctness, NOT a new S3/S5 C | Native guard already passes same outcomes |
-| B2 independently composed policy actor | Additional cross-agent autonomous policy/portfolio controller with external authority and later decision feedback | No source-grounded legitimate actor/task or incremental benefit; reject now | Affected operator documents independent lawful choice, parent-controlled enforcement and matched outcome |
-| B3 separate S3 case | Another current-commitment manager is separately recorded as GO/NEEDS_EVIDENCE | Distinct from per-tool permission and must not be double-counted | Existing traffic/supervisor/host queue subsumes it |
+| A · shipped baseline | MCP `can`; local wrappers; agent hooks; subagent result forwarding; workflow suspend/resume | App author supplies fixed rules, no demonstrated single first-party cross-path dynamically restrictive team S3 actor | Prototype native-only team actor and show equivalent feedback |
+| A · original active proposal | #1390 open toolGuard + denied-call hooks; #821 open rate/traffic and #1549 open replay fix | Proposed agent-local enforcement/transport, **not credited shipped** nor necessarily S3 | If merged unchanged and adequate for whole-team decision/return, extra port not justified |
+| B · reusable link | Reuse `can`, hooks, delegation, existing event/trace context, parent role config without changing authorization decisions | A composable independent S3 team state/decision interface with **no expansion of rights** | Same user actions can be achieved by a static wrapper with equal actual S3 ownership |
+| B · minimal missing port | A first-party shared/versioned live action-rights snapshot + restrictive multi-path enforcement/feedback seam for developer-composed decision actor, including non-bypassable child dispatch | Distinct choice `keep/narrow/hold/reassign/escalate`, authorized effect on next operation, feedback to next decision | No coherent common enforcement boundary or unavoidable double execution race -> no C |
+| Excluded overlapping case | Existing separate supervisor-commitment S3 case governs tasks/budget admission, not tool grants | Keep cases independent, do not double-count same constructor capability | If its actual eventual port already implements action-rights control, dedupe this case |
 
 ## Implementation options
 
-Reuse shipped native MCP rules; follow native #1390 for local/provider policy without duplicating an open PR; preserve human role/approval rights. No new code is approved. Proposed positive/negative native tests NOT_RUN; costs NOT_MEASURED.
+No code change now. Before implementation, compare (1) app-supplied stateless `can`/wrapper and documented hooks, (2) finishing original native #1390 without a new controller, (3) opt-in shared team current-control port. Draft only typed interfaces matched to actual original source, not a generic policy DSL. Rights scope cannot allow grants above the parent ceiling; a missing state/controller or stale snapshot must fail closed for protected actions. P1 native tests must cover local tools, provider tool invocation, MCP, delegate_task and resume, plus failure/denial outcome correlation.
 
 ## Specification and domain alternatives
 
-A policy DSL, static allowlist, `prepareStep` hiding, tool wrapper or authorization middleware can be valuable *native implementation choices* but is not automatically a VSM S3/S5 actor. S3* would require a distinct reviewer with separate evidence, decisive authorized hold/correction and later-work feedback; no qualifying use case verified. Do not infer S5 from access enforcement.
+This is a VSM-informed **S3 current-regulation constructibility experiment**, not a universal access-control requirement. Static per-agent authorization is a separate S1 safety check; no S5 policy issuance, S3* audit agency or S4 prospective environment model is inferred. A parent-owned policy engine or a narrowly scoped original #1177 fix is a legitimate final product choice; that choice is with maintainers. An independently configurable team's *temporary restriction* may be source-native and C-qualifiable even if the product does not adopt it. A future independent Index evaluation, not this proposal, would decide grades.
 
 ## Cost experiment
 
-Matched native-vs-on-top effort, latency, protection and maintenance not measured. Require identical task/tool calls, identity contexts, denied audit records, and startup/operational costs, including negative stale/missing-policy and privilege-escalation cases, before any claim of value.
+No matched execution, native suite, security test, cost estimate, slowdown or user-demand measurement was performed. A future apples-to-apples fixture should compare same team/commands/roles/denials with shipped baseline and proposed bounded team actor; measure tests, implementation/maintenance, latency, privilege leakage and decision-to-return observability. **NOT_RUN / NOT_MEASURED.**
 
 ## Delivery and publication
 
-- Review status: SOURCE_RECHECKED / PROPOSAL_ONLY; native runtime tests NOT_RUN; research NO_USEFUL_CHANGE.
-- Case previous terminal decision: NO_GO at historical metadata revision [original case receipt](https://github.com/opensiro-contributions/voltagent/blob/bd2d99bbaef190f420697b546829e0ca0ed2d09e/.opensiro/issues/tool-authorization-native-overlap-20261119/roadmap.md); the original evaluated object is preserved and remains NO_GO. This source-first repeat is **non-blind** because the historical case was consulted during intake. It must NOT be counted as an independently isolated fresh-chat run.
-- Separate case: [supervisor-commitment-control-20261119](https://github.com/opensiro-contributions/voltagent/blob/opensiro/meta/.opensiro/issues/supervisor-commitment-control-20261119/roadmap.md) is GO / NEEDS_EVIDENCE for optional S3 and not modified by this decision.
-- If the canonical case is persisted, source links and exact commit readback are required. This record is not a public external Issue/PR, code patch, Index grade or verified native test.
+- **First-pass sealed** at [#58 checkpoint](https://github.com/opensiro/upstream/issues/58#issuecomment-7043540206) before inspecting prior case argument.
+- **Historical comparison afterward:** preceding `tool-authorization-native-overlap-20261119` recorded **NO_GO / NO_USEFUL_CHANGE** for an autonomous S3/S5 policy chooser; it rejected unsupported new **ultimate policy** authority and unmeasured practical need. Wave 4 does **not** claim policy authority: it hypothesizes *bounded current-operational restriction* with parent-fixed rights. This distinction is the scoped reason for current **GO / NEEDS_EVIDENCE**, not a claim the previous review was wrong for its earlier scope; earlier commits remain immutable. Separate `supervisor-commitment-control-20261119` S3 GO stays unchanged.
+- Structural validation: pending native `scripts/validate_capability_roadmap.py` for complete Human/AI/receipt; final readback must be verified separately.
+- Research and product: `PLAN_ONLY`, native tests `NOT_RUN`, benefit `NOT_MEASURED`. No implementation or product adoption.
+- Public fork Issue: **NOT_PUBLISHED**, existing draft untouched; external original Issue/PR/comment: **NOT_PUBLISHED**. No third-party communication.
