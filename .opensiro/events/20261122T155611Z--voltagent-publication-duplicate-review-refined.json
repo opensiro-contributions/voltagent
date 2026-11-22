@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "20261122T155611Z--voltagent-publication-duplicate-review-refined",
+  "recorded_at": "2026-11-22T15:56:11Z",
+  "kind": "CHECKPOINT",
+  "actor": "ChatGPT OpenSiro pilot #93, dev-alpha-2 source audit",
+  "decision": "ORIGINAL_ISSUE_DRAFT_REVALIDATED_ADD_EXISTING_1166 / NO_EXTERNAL_PUBLICATION",
+  "evidence_urls": [
+    "https://github.com/VoltAgent/voltagent/issues/1166",
+    "https://github.com/VoltAgent/voltagent/issues/1177",
+    "https://github.com/VoltAgent/voltagent/pull/1390",
+    "https://github.com/opensiro/upstream/issues/93"
+  ],
+  "note": "Further duplicate sweep found original #1166 with pre-tool-call authorization, created March 20 updated August 4, 23 comments including suggested on_delegation. Full comments rechecked, typed selected-subset before handoff remains distinct proposal, not claimed product demand or non-overlap guarantee. Updated only external exact draft with explicit #1166 prior art, body SHA256 d601450864fa0b0a03b7aedc4162d09eee70d52d2101629f3a55321c3ca0ab6c; title unchanged hash 0b10245f34f95d2a0750b027b85966cdad9ba5c3a1e89f2f10d11c611ea93404. Original-issue seven-section validator and first-party native YAML form + original source HEAD recheck PASS. Existing canonical Human/AI/roadmap unchanged since preceding commit. No original Issue or comment posted; exact owner consent required.",
+  "next_action": "Show owner complete revised title/body, obtain specific consent or choose an existing-issue route; re-read original #1166/#1177/PR #1390 and original current HEAD immediately before any approved POST."
+}
