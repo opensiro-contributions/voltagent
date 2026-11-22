@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "20261122T181604Z--voltagent-external-issue-1559-publication-verified",
+  "recorded_at": "2026-11-22T18:16:04Z",
+  "actor": "OpenSiro Upstream authorized operator via dev-alpha-2 (xLagerFeuer GitHub identity)",
+  "kind": "EXTERNAL_ORIGINAL_ISSUE_PUBLICATION_VERIFIED",
+  "decision": "PUBLISHED_AND_READBACK_VERIFIED",
+  "original_repo": "VoltAgent/voltagent",
+  "working_fork": "opensiro-contributions/voltagent",
+  "case_id": "tool-authorization-native-overlap-20261119",
+  "external_issue_number": 1559,
+  "external_issue_url": "https://github.com/VoltAgent/voltagent/issues/1559",
+  "external_issue_state_at_readback": "OPEN",
+  "created_at": "2026-11-22T18:14:05Z",
+  "author": "xLagerFeuer",
+  "consent": "Specific current-conversation owner approval of full displayed title/body for VoltAgent/voltagent new Issue",
+  "title_sha256": "0b10245f34f95d2a0750b027b85966cdad9ba5c3a1e89f2f10d11c611ea93404",
+  "body_sha256": "d601450864fa0b0a03b7aedc4162d09eee70d52d2101629f3a55321c3ca0ab6c",
+  "original_source_head": "e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c",
+  "native_issue_template_blob_sha": "dec965d75e055faf65fd96fffb9af20299c5456e",
+  "validation": "All canonical, source, native form and exact payload gates PASS; immediate GitHub GET confirmed exact title/body",
+  "evidence_urls": [
+    "https://github.com/VoltAgent/voltagent/issues/1559",
+    "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/.github/ISSUE_TEMPLATE/feature_request.yml",
+    "https://github.com/opensiro/upstream/issues/93"
+  ],
+  "limitations": "Plan only. No implementation/tests/maintainer acceptance or index regrade. Subsequent original-repo interactions need separate exact consent."
+}
