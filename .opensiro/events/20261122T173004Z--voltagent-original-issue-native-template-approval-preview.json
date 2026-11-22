@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "20261122T173004Z--voltagent-original-issue-native-template-approval-preview",
+  "recorded_at": "2026-11-22T17:30:04Z",
+  "actor": "ChatGPT Upstream roadmap publication pilot #93, first-party GitHub form audit",
+  "kind": "CHECKPOINT",
+  "decision": "ORIGINAL_NATIVE_FORM_OWNER_PREVIEW_READY / EXACT_OUTBOUND_DRAFT_UNCHANGED / NO_EXTERNAL_PUBLICATION",
+  "evidence_urls": [
+    "https://github.com/VoltAgent/voltagent/blob/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c/.github/ISSUE_TEMPLATE/feature_request.yml",
+    "https://github.com/VoltAgent/voltagent/issues/1166",
+    "https://github.com/VoltAgent/voltagent/issues/1177",
+    "https://github.com/VoltAgent/voltagent/pull/1390",
+    "https://github.com/opensiro/upstream/pull/107"
+  ],
+  "note": "Pre-consent form comparison in same existing Roadmap case. Native YAML required problem and improve fields included verbatim; two optional fields represented semantically without their own labels. Title advisory [FEAT] differs from nonrequired prefill, original title/body unchanged from previous verified bytes. Exact owner-visible complete body still required in conversation; no new or third-party Issue sent. Live original main e9fc599..., form blob dec965... and config 51a926... verified 2026-11-22. Human/AI/roadmap untouched.",
+  "next_action": "Present exact full 10765-character original body, current source-pinned template, field comparison, target/action/title to owner for specific current-conversation consent. Then source/form/dedupe/hash recheck, POST only after consent."
+}
