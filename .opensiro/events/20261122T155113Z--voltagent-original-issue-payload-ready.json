@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "20261122T155113Z--voltagent-original-issue-payload-ready",
+  "recorded_at": "2026-11-22T15:51:13Z",
+  "actor": "ChatGPT OpenSiro Upstream pilot #93; dev-alpha-2 source checks, internal fork metadata only",
+  "kind": "CHECKPOINT",
+  "decision": "VOLTAGE_NARROW_S3_ORIGINAL_ISSUE_DRAFT_READY / INTERNAL_VALIDATORS_PASS / OUTWARD_PUBLICATION_NOT_AUTHORIZED",
+  "evidence_urls": [
+    "https://github.com/opensiro/upstream/issues/93",
+    "https://github.com/opensiro/upstream/issues/98",
+    "https://github.com/VoltAgent/voltagent/issues/1177",
+    "https://github.com/VoltAgent/voltagent/pull/1390",
+    "https://github.com/VoltAgent/voltagent/commit/e9fc599f6059afcd88b34f2bfc50d0d1d6a0877c"
+  ],
+  "note": "Original repository and source ref live verified. Issue #1177 age-triggered full body/comments review and PR #1390 live head/diff/reviews checked; no native feature regrade or user demand invented. Corrected only this existing Human 8-section + AI 6-section legacy case contract, historical roadmap.md preserved. Exact new original Issue draft source HEAD e9fc599f..., original YAML required fields included as nested headings within canonical seven outward sections. Title SHA256 0b10245f34f95d2a0750b027b85966cdad9ba5c3a1e89f2f10d11c611ea93404; body SHA256 d012d5437d28de1dce7daa2440f5991469f56409b8b00e0e23dd5ea0de63bc9a. Canonical validators / original payload / first-party native form preflight passed locally. This does NOT authorize third-party post; no external write.",
+  "next_action": "Read exact original title/body for approval. Re-run all canonical/source/native gates and check HEAD/state/concurrency before any approved POST. If owner declines, retain unpublished draft."
+}
